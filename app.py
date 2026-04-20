@@ -1,4 +1,6 @@
-import streamlit as st
+
+# Project built using Google Antigravity for Prompt War 2026
+# import streamlit as st
 
 # Set up the page title and icon
 st.set_page_config(page_title="Supply Chain Optimizer", page_icon="📦")
