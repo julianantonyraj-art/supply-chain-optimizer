@@ -1,0 +1,38 @@
+import streamlit as st
+
+# Set up the page title and icon
+st.set_page_config(page_title="Supply Chain Optimizer", page_icon="📦")
+
+# App Header
+st.title("📦 Supply Chain Efficiency Tool")
+st.markdown("### Powered by Lean Six Sigma Principles")
+st.write("Identify waste and get instant improvement suggestions for your operations.")
+
+# User Input
+problem = st.text_input("What process or bottleneck are you facing?", placeholder="e.g., Excess inventory in the regional warehouse")
+
+# Logic / Prompt-style response
+if st.button("Generate Solution"):
+    if problem:
+        st.subheader("Analysis & Recommendation")
+        
+        # This acts as a 'local' prompt logic for your demo
+        st.info(f"Analyzing bottleneck: '{problem}'")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.warning("⚖️ Waste Category (Muda)")
+            st.write("- Potential Overproduction or Unnecessary Motion.")
+            
+        with col2:
+            st.success("🛠️ Lean Action")
+            st.write("- Apply '5S' to organize the flow.\n- Implement 'Just-in-Time' (JIT) signaling.")
+            
+        st.balloons()
+    else:
+        st.error("Please enter a problem to analyze!")
+
+# Footer
+st.markdown("---")
+st.caption("Built for Google Prompt War | 2026")
